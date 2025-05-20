@@ -144,11 +144,13 @@
 }).setView([51.526, 12.332], 10);
 
 
-const OSM_BW = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18
+const Stamen_TonerLite = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
+                 '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    subdomains: 'abcd',
+    maxZoom: 20
 }).addTo(map);
-
+    
     L.control.zoom({
         position: 'topleft'
     }).addTo(map);
